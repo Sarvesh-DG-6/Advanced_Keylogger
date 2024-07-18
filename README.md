@@ -7,7 +7,7 @@ A Keylogger malware which collects and saves Key Logs, Clipboard, System Informa
 3. Run the keylogger.py and observe the malware process
   
 # Description:
-Understanding the working of a real-time keylogger malware. 
-When the malicious code is executed, it starts capturing real-time information from the victim's system in various file formats. 
-A Fernet key is generated to encrypt these files. 
+Understanding the working of a real-time keylogger malware.<br> 
+When the malicious code is executed, it starts capturing real-time information from the victim's system in various file formats.<br>
+A Fernet key is generated to encrypt these files.<br>
 Then the encrypted files are sent to the attacker via email service (SMTP) while the actual files are saved in the victim's system.
